@@ -1,0 +1,14 @@
+name: test_file
+on: push
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    strategy:
+      env:
+        - {ENV1: 1, ENV2: 2}
+        - {ENV1: 2, ENV2: 1}
+    steps:
+      - name: echo
+        env: ${{ matrix.env }}
+        runs: echo $ENV1
