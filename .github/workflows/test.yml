@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: echo
         env: ${{ matrix.env }}
-        run: echo $ENV1
+        run: ${GITHUB_WORKSPACE}/test.sh
