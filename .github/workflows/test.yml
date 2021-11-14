@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: echo
         env: ${{ matrix.env }}
-        runs: echo $ENV1
+        run: echo $ENV1
